@@ -1,0 +1,19 @@
+metadata:
+  name: pgadmin
+  annotations:
+    {}
+    #  key: string
+  labels:
+    {}
+    #  key: string
+  namespace: postgres-operator
+spec:
+  selector:
+    postgres-operator.crunchydata.com/data: pgadmin
+    #  key: string
+  ports:
+    - name: pgadmin
+      port: 5050
+      protocol: TCP
+      targetPort: 5050
+      nodePort: 30050
